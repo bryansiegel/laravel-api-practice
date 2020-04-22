@@ -15,9 +15,18 @@ class TodoController extends Controller
      */
     public function index()
     {
-        $response = Http::get('https://jsonplaceholder.typicode.com/todos/');
+        $response = Http::get('https://jsonplaceholder.typicode.com/todos/1');
         $data = $response->json();
-        dd($data);
+        // dd($data);
+        // return $data['title'];
+
+        $todo = new Todo;
+        $todo->id = $data['id'];
+        $todo->title = $data['title'];
+        $todo->completed = $data['completed'];
+        $todo->save();
+
+
     }
 
     /**
