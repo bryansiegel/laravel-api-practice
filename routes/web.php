@@ -17,10 +17,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 
-    //Students API
-    Route::get('students', 'ApiController@getAllStudents');
-    Route::get('students/{id}', 'ApiController@getAllStudents');
-    Route::post('students', 'ApiController@createStudent');
-    Route::put('students{id}', 'ApiController@updateStudent');
-    Route::delete('students/{id}', 'ApiController@deleteStudent');
+
 });
