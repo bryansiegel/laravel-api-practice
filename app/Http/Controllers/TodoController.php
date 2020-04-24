@@ -26,7 +26,6 @@ class TodoController extends Controller
         $todo->completed = $data['completed'];
         $todo->save();
 
-
     }
 
     /**
